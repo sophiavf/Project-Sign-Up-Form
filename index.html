@@ -37,28 +37,34 @@
 						<p class="two">You <em>know</em> you want to.</p>
 					</div>
 					<div class="formContainer">
-						<form action="example.com/path" method="post">
+						<form action="example.com/path" method="post" novalidate>
 							<div class="shadowContainer">
 								<h2>Let's do this!</h2>
-								<div>
+								<div class="gridContainer">
 									<label for="first_name">
 										First name:<br />
-										<input type="text" id="first_name" name="first_name" />
+										<input
+											type="text"
+											id="first_name"
+											name="first_name"
+											required
+											minlength="2"
+										/>
 									</label>
-								</div>
-								<div>
 									<label for="lasst_name">
 										Last name:<br />
-										<input type="text" id="last_name" name="last_name" />
+										<input
+											type="text"
+											id="last_name"
+											name="last_name"
+											minlength="2"
+											required
+										/>
 									</label>
-								</div>
-								<div>
 									<label for="email">
 										Email: <br />
-										<input type="email" id="user_email" name="email" />
+										<input type="email" id="user_email" name="email" required />
 									</label>
-								</div>
-								<div>
 									<label for="phone_number">
 										Phone number:<br />
 										<input
@@ -67,24 +73,29 @@
 											name="phone_number"
 										/>
 									</label>
-								</div>
-								<div>
 									<label for="password">
 										Password:<br />
-										<input type="password" id="user_password" name="password" />
+										<input
+											type="password"
+											id="user_password"
+											name="password"
+											class="error"
+										/>
+										<span class="errorMessage" aria-live="polite"></span>
 									</label>
-								</div>
-								<div>
 									<label for="confirm_password">
 										Confirm password:<br />
 										<input
-											type="confirm_password"
+											type="password"
 											id="confirm_password"
 											name="confirm_password"
+											class="error"
+											oninput="matchPassword()"
 										/>
 									</label>
 								</div>
 							</div>
+
 							<div class="formFooter">
 								<div id="buttonContainer">
 									<button type="submit">Create Account</button>
@@ -98,5 +109,6 @@
 				</div>
 			</div>
 		</main>
+		<script src="passwordValidation.js"></script>
 	</body>
 </html>
