@@ -121,12 +121,15 @@ div.gridContainer {
 	padding: var(--right-padding);
 }
 /* This is the style of our error messages */
+/* https://developer.mozilla.org/en-US/docs/Learn/Forms/Form_validation */
 span.errorMessage {
 	width: 100%;
 	padding: 0;
 	flex-wrap: nowrap;
 	font-size: 80%;
 	color: #900;
+	box-sizing: border-box; 
+	/* https://developer.mozilla.org/en-US/docs/Web/CSS/box-sizing */
 }
 .error.active {
 	padding: 0.3em;
