@@ -6,6 +6,7 @@ html {
 	--forest-green: #596d48;
 	--light-border: #e5e7eb;
 	--right-padding: 2rem;
+	--invalid: #900; 
 	box-sizing: border-box;
 }
 body {
@@ -127,7 +128,7 @@ span.errorMessage {
 	padding: 0;
 	flex-wrap: nowrap;
 	font-size: 80%;
-	color: #900;
+	color: var(--invalid);
 	box-sizing: border-box; 
 	/* https://developer.mozilla.org/en-US/docs/Web/CSS/box-sizing */
 }
@@ -135,5 +136,20 @@ span.errorMessage {
 	padding: 0.3em;
 }
 .invalid {
-	border-color: #900;
+	border-color: var(--invalid);
+}
+
+.popup {
+	color: var(--NightBlueShadow); 
+	display:none;
+	background-color: var(--light-border);
+	border-radius: 6px;
+	position: absolute;
+	top: 50%; 
+	left: 50%;
+	transform: translate(-50%, -50%);
+	justify-content: center;
+	flex-direction: column;
+	text-align: center; 
+	padding: 30px; 
 }

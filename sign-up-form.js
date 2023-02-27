@@ -17,3 +17,18 @@ function matchPassword() {
 		return;
 	}
 }
+
+const submitButton = document.querySelector('button[type="submit"]');
+const popupWindow = document.querySelector(".popup");
+const closeButton = document.querySelector(".close");
+const formElement = document.querySelector("form")
+
+submitButton.addEventListener("click", () => {
+	popupWindow.style.display = "block";
+});
+
+closeButton.addEventListener("click", () => {
+	popupWindow.style.display = "none";
+	formElement.reset(); 
+});
+
