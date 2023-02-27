@@ -104,6 +104,10 @@ input:focus {
 	border-color: blue;
 }
 
+input:invalid:focus {
+	border: 2px solid red; 
+}
+
 div.shadowContainer {
 	padding: var(--right-padding);
 	/* offset-x | offset-y | blur-radius | color */

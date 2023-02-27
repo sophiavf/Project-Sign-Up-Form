@@ -37,22 +37,22 @@
 						<p class="two">You <em>know</em> you want to.</p>
 					</div>
 					<div class="formContainer">
-						<form onsubmit="event.preventDefault()" method="post" novalidate>
+						<form id="form" onsubmit="event.preventDefault()">
 							<div class="shadowContainer">
 								<h2>Let's do this!</h2>
 								<div class="gridContainer">
 									<label for="first_name">
-										First name:<br />
+										*First name:<br />
 										<input
 											type="text"
 											id="first_name"
 											name="first_name"
-											required
 											minlength="2"
+											required
 										/>
 									</label>
-									<label for="lasst_name">
-										Last name:<br />
+									<label for="last_name">
+										*Last name:<br />
 										<input
 											type="text"
 											id="last_name"
@@ -62,7 +62,7 @@
 										/>
 									</label>
 									<label for="email">
-										Email: <br />
+										*Email: <br />
 										<input type="email" id="user_email" name="email" required />
 									</label>
 									<label for="phone_number">
@@ -74,23 +74,25 @@
 										/>
 									</label>
 									<label for="password">
-										Password:<br />
+										*Password:<br />
 										<input
 											type="password"
 											id="user_password"
 											name="password"
 											class="error"
+											required
 										/>
 										<span class="errorMessage" aria-live="polite"></span>
 									</label>
 									<label for="confirm_password">
-										Confirm password:<br />
+										*Confirm password:<br />
 										<input
 											type="password"
 											id="confirm_password"
 											name="confirm_password"
 											class="error"
 											oninput="matchPassword()"
+											required
 										/>
 									</label>
 								</div>
