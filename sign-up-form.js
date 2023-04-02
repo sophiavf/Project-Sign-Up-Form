@@ -10,8 +10,17 @@ const form = document.getElementById("form");
 const popupWindow = document.querySelector(".popup");
 const closeButton = document.querySelector(".close");
 const formElement = document.querySelector("form");
+loadFooter(); 
 
-var passwordValidity = false;
+function loadFooter() {
+	const bodyTag = document.querySelector("body");
+	const currentYear = new Date().getFullYear();
+	const footer =  document.createElement("footer");
+	const footerContent = document.createElement("div");
+	footerContent.innerHTML = `Author: Sophia <a href="https://github.com/sophiavf">GitHub</a> &copy ${currentYear}`;
+	footer.appendChild(footerContent);
+	bodyTag.appendChild(footer);
+}
 
 function matchPassword() {
 	// if the confirm?password input is onfocus, this function is run to check if the passwords match
