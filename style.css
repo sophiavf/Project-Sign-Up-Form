@@ -5,8 +5,9 @@
 html {
 	--forest-green: #596d48;
 	--light-border: #e5e7eb;
-	--right-padding: 2rem;
-	--invalid: #900; 
+	--button-background: #4b6e2e;
+	--padding: 2em;
+	--invalid: #900;
 	box-sizing: border-box;
 }
 body {
@@ -78,15 +79,29 @@ a {
 
 /* form styling */
 button {
+	display: inline-block;
 	background-color: var(--forest-green);
 	border: 2px solid var(--forest-green);
 	margin-bottom: 2em;
 	width: 11em;
-	border-radius: 5px;
+	border-radius: 15px;
 	font-family: inherit;
 	font-size: 100%;
 	color: white;
 	padding: 0.5rem;
+	outline: none;
+	text-decoration: none;
+	box-shadow: 0 9px #999;
+}
+
+button:hover {
+	background-color: var(--button-background);
+}
+
+button:active {
+	background-color: var(--button-background);
+	box-shadow: 0 5px #666;
+	transform: translateY(4px);
 }
 
 input {
@@ -105,11 +120,11 @@ input:focus {
 }
 
 input:invalid:focus {
-	border: 2px solid red; 
+	border: 2px solid red;
 }
 
 div.shadowContainer {
-	padding: var(--right-padding);
+	padding: var(--padding);
 	/* offset-x | offset-y | blur-radius | color */
 	box-shadow: -8px 0 8px var(--light-border);
 }
@@ -123,7 +138,7 @@ div.gridContainer {
 
 .formDescription,
 .formFooter {
-	padding: var(--right-padding);
+	padding: var(--padding);
 }
 /* This is the style of our error messages */
 /* https://developer.mozilla.org/en-US/docs/Learn/Forms/Form_validation */
@@ -133,7 +148,7 @@ span.errorMessage {
 	flex-wrap: nowrap;
 	font-size: 80%;
 	color: var(--invalid);
-	box-sizing: border-box; 
+	box-sizing: border-box;
 	/* https://developer.mozilla.org/en-US/docs/Web/CSS/box-sizing */
 }
 .error.active {
@@ -144,16 +159,16 @@ span.errorMessage {
 }
 
 .popup {
-	color: var(--NightBlueShadow); 
-	display:none;
+	color: var(--NightBlueShadow);
+	display: none;
 	background-color: var(--light-border);
 	border-radius: 6px;
 	position: absolute;
-	top: 50%; 
+	top: 50%;
 	left: 50%;
 	transform: translate(-50%, -50%);
 	justify-content: center;
 	flex-direction: column;
-	text-align: center; 
-	padding: 30px; 
+	text-align: center;
+	padding: var(--padding);
 }

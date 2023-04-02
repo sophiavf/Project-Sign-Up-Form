@@ -37,7 +37,12 @@
 						<p class="two">You <em>know</em> you want to.</p>
 					</div>
 					<div class="formContainer">
-						<form id="form" onsubmit="event.preventDefault()">
+						<form
+							id="form"
+							onsubmit="event.preventDefault()"
+							action="#"
+							method="get"
+						>
 							<div class="shadowContainer">
 								<h2>Let's do this!</h2>
 								<div class="gridContainer">
@@ -80,6 +85,7 @@
 											id="user_password"
 											name="password"
 											class="error"
+											onkeyup="matchPassword()"
 											required
 										/>
 										<span class="errorMessage" aria-live="polite"></span>
@@ -91,7 +97,7 @@
 											id="confirm_password"
 											name="confirm_password"
 											class="error"
-											oninput="matchPassword()"
+											onkeyup="matchPassword()"
 											required
 										/>
 									</label>
